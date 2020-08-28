@@ -8,21 +8,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap" rel="stylesheet">
 </head>
 <body>
+<!--Added a container to make the site responsive-->
+<div id="container">
 <!--more text created on homepage-->
-
-
-<ul>
-  <li id="header"><a href="customer">Customer</a></li>
-  <li id="header"><a href="password">Admin</a></li>
-
-
+<ul class="headUl">
+  <li class="headLi"><a href="customer">Customer</a></li>
+  <li class="headLi"><a href="password">Admin</a></li>
+  <% if (locals.loggedIn) { %>
+  <li class="headLi logout"><a href="logout">Logout</a></li>
+  <% } %>
 </ul>
 <br>
 <div class="home">
   <div class="landing">
     <h1 class="welcome">Welcome!</h1>
-    <img src="https://i.imgur.com/6Q1IJ5u.png" alt="Cloud 9 Logo" class="logo">
+    <img src="Cloud9%20Logo.png" alt="Cloud 9 Logo" class="logo">
   </div>
+</div>
 </div>
 </body>
 </html>
